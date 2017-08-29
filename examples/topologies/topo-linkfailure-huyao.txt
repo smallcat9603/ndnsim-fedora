@@ -1,0 +1,40 @@
+# topo-linkfailure.txt
+
+router
+
+#node	city	y	x	mpi-partition
+c	NA	50	10	
+r8	NA	30	20	
+r2	NA	70	30	
+r4	NA	50	30	
+r9	NA	30	30	
+r12	NA	10	30	
+r1	NA	80	40
+r5	NA	50	40	
+r10	NA	30	40	
+r3	NA	70	50	
+r6	NA	50	50	
+r11	NA	30	50	
+r7	NA	60	60	
+r13	NA	10	70
+p	NA      50      70
+
+link
+
+# from	    to		capacity	metric	delay	queue
+r1	    r2   	10Mbps		1	10ms	100
+c	    r2 	        10Mbps		1	10ms	100
+r2	    r3   	10Mbps		1	10ms	100
+r3	    r7   	10Mbps		1	10ms	100
+r7	    p    	10Mbps		1	10ms	100
+c	    r4   	10Mbps		1	10ms	100
+r4	    r5   	10Mbps		1	10ms	100
+r5	    r6   	10Mbps		1	10ms	100
+r6	    r7  	10Mbps		1	10ms	100
+c	    r8   	10Mbps		1	10ms	100
+r8	    r9   	10Mbps		1	10ms	100
+r9	    r10 	10Mbps		1	10ms	100
+r10	    r11 	10Mbps		1	10ms	100
+r11	    p    	10Mbps		1	10ms	100
+r8	    r12    	10Mbps		1	10ms	100
+r11	    r13    	10Mbps		1	10ms	100
